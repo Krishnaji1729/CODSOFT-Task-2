@@ -27,4 +27,5 @@ This is a beginner-friendly **command-line calculator** built using Python. It a
 
 
 ## 📂 Project Structure
+![Image](https://github.com/user-attachments/assets/2153456a-e987-4f4e-babe-dc6ae7e50eb6)
 
