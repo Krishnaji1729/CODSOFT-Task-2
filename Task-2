@@ -1,0 +1,59 @@
+/*  Simple Python Calculator
+This is a beginner-friendly command-line calculator built using Python. 
+It allows users to perform basic arithmetic operations — addition, subtraction, multiplication, and division — on two numbers entered by the user. */
+
+
+# A Simple Calculator with Basic Arithmetic Operation
+print("===================================")
+print("       SIMPLE PYTHON CALCULATOR")
+print("===================================\n")
+
+first_number_input = input("Enter the first number: ")
+try:
+    first_number = float(first_number_input)
+except ValueError:
+    print("Invalid input! Please enter a valid number.")
+    exit()
+
+second_number_input = input("Enter the second number: ")
+try:
+    second_number = float(second_number_input)
+except ValueError:
+    print("Invalid input! Please enter a valid number.")
+    exit()
+
+print("\nChoose the operation:")
+print("1. Addition (+)")
+print("2. Subtraction (-)")
+print("3. Multiplication (*)")
+print("4. Division (/)")
+
+operation = input("Enter your choice (1/2/3/4 or + - * /): ")
+
+if operation == "1" or operation == "+":
+    result = first_number + second_number
+    operator = "+"
+    print(f"\nResult: {first_number} {operator} {second_number} = {result}")
+
+elif operation == "2" or operation == "-":
+    result = first_number - second_number
+    operator = "-"
+    print(f"\nResult: {first_number} {operator} {second_number} = {result}")
+
+elif operation == "3" or operation == "*":
+    result = first_number * second_number
+    operator = "*"
+    print(f"\nResult: {first_number} {operator} {second_number} = {result}")
+
+elif operation == "4" or operation == "/":
+    if second_number == 0:
+        print("\nError: Cannot divide by zero!")
+    else:
+        result = first_number / second_number
+        operator = "/"
+        print(f"\nResult: {first_number} {operator} {second_number} = {result}")
+
+else:
+    print("\nInvalid operation selected.")
+    
+print("\nThank you for using the calculator!")
